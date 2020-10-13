@@ -1,0 +1,2 @@
+20:45:59 [Test worker] INFO  com.example.gov.tests.TestBase - start test typeInSearchFieldTest with parameters: []
+20:46:40 [Test worker] INFO  com.example.gov.tests.TestBase - stop testtypeInSearchFieldTest
