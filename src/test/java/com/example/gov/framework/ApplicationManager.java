@@ -1,10 +1,16 @@
 package com.example.gov.framework;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.concurrent.TimeUnit;
 
@@ -24,9 +30,15 @@ public class ApplicationManager {
 
     public void init() {
          if (browser.equals(BrowserType.CHROME)){
-            wd = new ChromeDriver();
+             ChromeOptions options = new ChromeOptions();
+             options.setCapability("acceptInsecureCerts", true);
+            wd = new ChromeDriver(options);
+
         } else if(browser.equals(BrowserType.FIREFOX)){
-            wd = new FirefoxDriver();
+             DesiredCapabilities capabilities = new DesiredCapabilities();
+             capabilities.setAcceptInsecureCerts(true);
+             WebDriver driver = new FirefoxDriver(capabilities);
+            wd = new FirefoxDriver(capabilities);
         }
 
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

@@ -1,0 +1,6 @@
+12:30:46 [Test worker] INFO  com.example.gov.tests.TestBase - start test SearchAshdodReceptionFromHeader with parameters: []
+12:30:48 [Test worker] INFO  com.example.gov.tests.TestBase - stop testSearchAshdodReceptionFromHeader
+12:30:48 [Test worker] INFO  com.example.gov.tests.TestBase - start test SearchReceptionFromHeader with parameters: []
+12:30:49 [Test worker] INFO  com.example.gov.tests.TestBase - stop testSearchReceptionFromHeader
+12:30:49 [Test worker] INFO  com.example.gov.tests.TestBase - start test typeInSearchFieldTest with parameters: []
+12:30:50 [Test worker] INFO  com.example.gov.tests.TestBase - stop testtypeInSearchFieldTest
